@@ -1,0 +1,240 @@
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bijoux Maroc - Boutique de bijoux marocains authentiques : Or 18K, Argent 925, Khalkhal, colliers berbères. Livraison partout au Maroc.">
+    <title>Bijoux Maroc - Bijoux Marocains Authentiques</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="logo"><img src="images/logo.jpg" alt="Bijoux Maroc" class="logo-img">BIJOUX <span>MAROC</span></div>
+        <nav class="nav" id="nav">
+            <a href="#accueil">Accueil</a>
+            <a href="#boutique">Boutique</a>
+            <a href="#promo">Promotions</a>
+            <a href="#avis">Avis</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+            Panier (<span id="cartCount">0</span>)
+        </button>
+    </header>
+
+    <!-- ===== Slider ===== -->
+    <section id="accueil" class="slider">
+        <div class="slide slide-1">
+            <div class="slide-content">
+                <h1>L'Éclat des Traditions Marocaines</h1>
+                <p>Khalkhal, colliers berbères, bracelets - fabriqués à la main par nos artisans</p>
+                <a href="#boutique" class="btn-hero">Découvrir la collection</a>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <h1>Or 18K Certifié</h1>
+                <p>Poinçonnez et certifiez vos bijoux précieux avec garantie 10 ans</p>
+                <a href="#boutique" class="btn-hero">Voir les bijoux en Or</a>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <h1>Offrez l'Élégance</h1>
+                <p>Des idées cadeaux uniques pour chaque occasion spéciale</p>
+                <a href="#promo" class="btn-hero">Voir les promos</a>
+            </div>
+        </div>
+
+        <button class="slider-arrow prev" id="sliderPrev" aria-label="Précédent">&#10094;</button>
+        <button class="slider-arrow next" id="sliderNext" aria-label="Suivant">&#10095;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    
+    <!-- ===== Catégories ===== -->
+    <section class="categories">
+        <h2 class="section-title reveal">Nos Catégories</h2>
+        <div class="categories-grid" id="categoriesGrid"></div>
+    </section>
+
+    <!-- ===== Boutique ===== -->
+    <section id="boutique" class="shop">
+        <h2 class="section-title reveal">Notre Boutique</h2>
+
+        <div class="toolbar reveal">
+            <input type="text" id="searchInput" placeholder="Rechercher un bijou...">
+            <select id="sortSelect" class="sort-select">
+                <option value="defaut">Trier par</option>
+                <option value="prix-asc">Prix : croissant</option>
+                <option value="prix-desc">Prix : décroissant</option>
+                <option value="note">Meilleures notes</option>
+                <option value="nom">Nom (A-Z)</option>
+            </select>
+            <div class="filters" id="filtersContainer"></div>
+        </div>
+
+        <div class="tabs reveal">
+            <button class="tab-btn active" data-tab="nouveaux">Nouveautés</button>
+            <button class="tab-btn" data-tab="promos">Promotions</button>
+            <button class="tab-btn" data-tab="meilleurs">Meilleures ventes</button>
+        </div>
+
+        <div class="products-grid" id="productsContainer"></div>
+    </section>
+
+    <!-- ===== Bandeau promo + countdown ===== -->
+    <section id="promo" class="promo-banner">
+        <div class="promo-inner reveal">
+            <div>
+                <h2>Vente Flash -15%</h2>
+                <p>Sur tous les bijoux en promotion. Dépêchez-vous, l'offre se termine bientôt !</p>
+                <a href="#boutique" class="btn-hero dark">J'en profite</a>
+            </div>
+            <div class="countdown">
+                <div class="cd-box"><span id="cdHours">00</span><small>Heures</small></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-box"><span id="cdMin">00</span><small>Minutes</small></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-box"><span id="cdSec">00</span><small>Secondes</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Avis clients ===== -->
+    <section id="avis" class="avis-section">
+        <h2 class="section-title reveal">Ce que disent nos clients</h2>
+        <div class="avis-carousel" id="avisTrack"></div>
+    </section>
+
+    <!-- ===== À propos ===== -->
+   <div class="about-img reveal">
+    <div class="about-ornament">
+        <span class="about-diamond">&#9670;</span>
+    </div>
+    <img src="images/logo.jpg" alt="Bijoux Maroc" class="about-logo">
+    <div class="about-placeholder">BIJOUX <span style="color :#ffd166;"> MAROC</span></div>
+</div>
+        <div class="about-text reveal">
+            <h2>Notre Histoire</h2>
+            <p>Depuis plus de 25 ans, nous perpétuons le savoir-faire joaillier marocain en alliant traditions ancestrales et design contemporain.</p>
+            <p>Chaque pièce est façonnée à la main dans notre atelier, avec des matériaux certifiés et des pierres naturelles sélectionnées avec soin.</p>
+            <ul>
+                <li>&#10003; Or 18K poinçonné et certifié</li>
+                <li>&#10003; Fait main au Maroc</li>
+                <li>&#10003; Emballage cadeau offert</li>
+                <li>&#10003; Garantie qualité</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <h2 class="section-title reveal">Questions Fréquentes</h2>
+        <div class="faq-list" id="faqList"></div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="newsletter">
+        <h2>Restez informé des nouveautés</h2>
+        <p>Recevez nos offres exclusives et les dernières collections directement par email.</p>
+        <div class="newsletter-form">
+            <input type="email" id="newsletterInput" placeholder="Votre adresse email...">
+            <button id="newsletterBtn">S'abonner</button>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <div class="logo"><img src="images/logo.jpg" alt="Bijoux Maroc" class="logo-img">BIJOUX <span>MAROC</span></div>
+                <p class="footer-desc">Bijoux marocains authentiques, faits main avec amour.</p>
+            </div>
+            <div>
+                <h4>Liens utiles</h4>
+                <a href="#accueil">Accueil</a>
+                <a href="#boutique">Boutique</a>
+                <a href="#avis">Avis clients</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Agadir, Maroc</p>
+                <p><a href="tel:+212600000000">+212 704372322</a></p>
+                <p><a href="mailto:contact@bijouxmaroc.ma">marocbijoux6@gmail.com</a></p>
+            </div>
+            <div>
+                <h4>Paiement</h4>
+                <div class="pay-icons">
+                    <span>COD</span><span>VISA</span><span>MASTERCARD</span><span>CMI</span>
+                </div>
+                <h4 style="margin-top:14px">Suivez-nous</h4>
+                <div class="socials">
+                    <a href="https://www.instagram.com/prinzessin_8h?igsi=emVwMGZ1cW9tdm1q">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61577466671903">Facebook</a>
+                    <a href="https://www.tiktok.com/@bijoux.maroc13?_r=1&_t=ZS-99INi6Xj3Zc">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Bijoux Maroc. Tous droits réservés.</p>
+    </footer>
+
+    <!-- ===== Bouton WhatsApp ===== -->
+    <a class="whatsapp-float" href="https://wa.me/212704372322" target="_blank" rel="noopener"
+       aria-label="Contacter sur WhatsApp">WhatsApp</a>
+
+    <!-- ===== Overlay ===== -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===== Panier ===== -->
+    <aside class="cart-panel" id="cartPanel" aria-label="Panier">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="cart-close" id="cartClose" aria-label="Fermer">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total : <span id="cartTotal"></span></div>
+            <button class="btn-checkout" id="checkoutBtn">Passer au paiement</button>
+        </div>
+    </aside>
+
+    <!-- ===== Modal de paiement ===== -->
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Finaliser la commande</h3>
+                <button class="cart-close" id="modalClose" aria-label="Fermer">&times;</button>
+            </div>
+            <div id="checkoutBody"></div>
+        </div>
+    </div>
+
+    <!-- ===== Quick view ===== -->
+    <div class="modal" id="quickView" aria-hidden="true">
+        <div class="modal-box qv-box">
+            <div class="modal-header">
+                <h3>Aperçu du produit</h3>
+                <button class="cart-close" id="qvClose" aria-label="Fermer">&times;</button>
+            </div>
+            <div id="qvBody"></div>
+        </div>
+    </div>
+
+    <!-- ===== Notifications ===== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
